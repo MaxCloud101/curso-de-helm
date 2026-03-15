@@ -85,5 +85,7 @@ mi-chart/
 ```
 
 **Chart.yaml →** metadata del chart
+
 **values.yaml →** configuración por defecto
+
 **templates/ →** plantillas de Kubernetes
