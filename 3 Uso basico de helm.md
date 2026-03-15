@@ -72,4 +72,32 @@ helm search hub
 
 ## Instalar un chart
 
+- Para instalar un chart y desplegar una aplicacion
 
+```sh
+helm install [RELEASE_NAME] [CHART] [flags]
+```
+
+Ejemplo
+
+```sh
+helm install web bitnami/nginx
+```
+
+- Para instalar un chart usando un archivo
+
+Archivo values.yaml
+
+```sh
+replicaCount: 3
+```
+
+```sh
+helm install web bitnami/nginx -f values.yaml
+```
+
+- Para definir valores directamente desde la línea de comandos.
+
+```sh
+helm install web bitnami/nginx --set replicaCount=3
+```
