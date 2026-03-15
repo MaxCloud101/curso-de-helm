@@ -51,10 +51,12 @@ Los Values son parámetros de configuración que personalizan la instalación.
 
 Ejemplo:
 
+```yaml
 replicaCount: 3
 
 service:
   type: LoadBalancer
+```
 
 helm install -f values.yaml
 
