@@ -101,3 +101,15 @@ helm install web bitnami/nginx -f values.yaml
 ```sh
 helm install web bitnami/nginx --set replicaCount=3
 ```
+
+- Para instalar un chart en un namespace
+
+```sh
+helm install web bitnami/nginx --namespace production
+```
+
+- Para instalar un chart en un namespace y crear el namespace si no existe
+
+```sh
+helm install web bitnami/nginx --namespace production --create-namespace
+```
