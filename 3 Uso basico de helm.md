@@ -113,3 +113,26 @@ helm install web bitnami/nginx --namespace production
 ```sh
 helm install web bitnami/nginx --namespace production --create-namespace
 ```
+
+- Para simular una instalacion sin instalarla
+
+```sh
+helm install web bitnami/nginx --dry-run
+```
+- Para mostrar informacion detallada de la instalacion
+
+```sh
+helm install web bitnami/nginx --debug
+```
+
+- Esperar hasta que los recursos estén listos.
+
+```sh
+helm install web bitnami/nginx --wait
+```
+
+- Agregar un tiempo máximo de espera.
+
+```sh
+helm install web bitnami/nginx --timeout 5m
+```
