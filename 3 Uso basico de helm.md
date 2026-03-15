@@ -37,6 +37,12 @@ helm repo remove bitnami
 - Para buscar en un repositorio
 
 ```sh
+helm search repo [KEYWORD] [flags]
+```
+
+Ejemplo:
+
+```sh
 helm search repo mysql
 helm search repo database
 ```
