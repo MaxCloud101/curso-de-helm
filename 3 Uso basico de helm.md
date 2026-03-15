@@ -177,6 +177,30 @@ Esto hace:
 helm status web
 ```
 
+## Helm values
+
+Usaremos el siguiente chart:
+
+https://artifacthub.io/packages/helm/bitnami/mariadb?modal=values-schema
+
+values.yaml 
+
+```yaml
+auth:
+  database: "helm_training"
+  password: "Test1234"
+  username: "custom_user"
+  rootPassword: "RootPass1234"
+```
+
+```sh
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+```sh
+helm install my-mariadb bitnami/mariadb --version 25.0.1 -f values.yaml
+```
+
 ## Multiple namespaces
 
 - Desplegar el chart en diferentes namespaces
