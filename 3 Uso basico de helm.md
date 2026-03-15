@@ -136,3 +136,20 @@ helm install web bitnami/nginx --wait
 ```sh
 helm install web bitnami/nginx --timeout 5m
 ```
+
+## Ejemplo
+
+```sh
+helm install nginx-web bitnami/nginx \
+  --namespace web \
+  --create-namespace \
+  --set replicaCount=3 \
+  --wait
+```
+
+Esto hace:
+
+- Instala nginx
+- Crea namespace web
+- Usa 3 replicas
+- Espera a que los pods estén listos
