@@ -86,7 +86,7 @@ helm install web bitnami/nginx
 
 - Para instalar un chart usando un archivo
 
-Archivo values.yaml
+values.yaml
 
 ```sh
 replicaCount: 3
