@@ -11,10 +11,22 @@ helm repo list
 - Para agregar un repositorio
 
 ```sh
+helm repo add [REPO-NAME] [REPO-URL]
+```
+
+Ejemplo
+
+```sh
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
 - Para eliminar un repositoio
+
+```sh
+helm repo remove [REPO-NAME]
+```
+
+Ejemplo
 
 ```sh
 helm repo remove bitnami
@@ -40,4 +52,6 @@ helm search repo database --versions
 helm search hub
 ```
 
-## Ejemeplo
+## Instalar un chart
+
+
