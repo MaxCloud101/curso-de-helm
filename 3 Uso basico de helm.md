@@ -1,6 +1,6 @@
 # Uso basico de helm
 
-# Trabajando con repositorio
+## Trabajando con repositorio
 
 - Para listar los repositorios agregados localmente
 
@@ -20,7 +20,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo remove bitnami
 ```
 
-# Buscar en repositorios
+## Buscar en repositorios
 
 - Para buscar en un repositorio
 
@@ -40,3 +40,4 @@ helm search repo database --versions
 helm search hub
 ```
 
+## Ejemeplo
