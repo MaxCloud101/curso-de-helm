@@ -143,10 +143,18 @@ helm install web bitnami/nginx --wait
 helm install web bitnami/nginx --timeout 5m
 ```
 
+## Eliminar chart
+
+- Para eliminar un chart
+
+```sh
+helm uninstall
+```
+
 ## Ejemplo
 
 ```sh
-helm install nginx-web bitnami/nginx \
+helm install web bitnami/nginx \
   --namespace web \
   --create-namespace \
   --set replicaCount=3 \
@@ -160,3 +168,30 @@ Esto hace:
 - Crea namespace web
 - Usa 3 replicas
 - Espera a que los pods estén listos
+
+## Chart status
+
+- Para ver el estado de un chart
+
+```sh
+helm status web
+```
+
+## Multiple namespaces
+
+- Desplegar el chart en diferentes namespaces
+
+```sh
+helm install web bitnami/nginx --create-namespace -n prod 
+```
+
+```sh
+helm install web bitnami/nginx --create-namespace -n dev
+```
+
+- Ver todas las instalaciones
+
+```sh
+helm ls -A
+```
+
