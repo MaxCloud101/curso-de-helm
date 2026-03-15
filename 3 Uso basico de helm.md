@@ -102,6 +102,12 @@ helm install web bitnami/nginx -f values.yaml
 helm install web bitnami/nginx --set replicaCount=3
 ```
 
+- Para instalar una version específica
+
+```sh
+helm install web bitnami/nginx --version 17.3.9
+```
+
 - Para instalar un chart en un namespace
 
 ```sh
@@ -144,6 +150,7 @@ helm install nginx-web bitnami/nginx \
   --namespace web \
   --create-namespace \
   --set replicaCount=3 \
+  --version 17.3.9 \
   --wait
 ```
 
