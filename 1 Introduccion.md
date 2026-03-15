@@ -63,7 +63,9 @@ helm install -f values.yaml
 
 ## Ejemplo
 
+```yaml
 helm install web nginx/nginx
+```
 
 ## Ventajas de Helm
 
