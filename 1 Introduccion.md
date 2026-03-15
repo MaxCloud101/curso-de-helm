@@ -94,7 +94,7 @@ mi-chart/
 
 Es un repositorio donde se almacenan y distribuyen Charts de Helm para instalar aplicaciones en Kubernetes.
 
-### Repositorios Helm populares
+### Repositorios Helm mas populares
 
 
 - Bitnami Helm Charts
