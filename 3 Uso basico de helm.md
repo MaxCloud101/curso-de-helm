@@ -34,7 +34,7 @@ helm repo remove bitnami
 
 ## Buscar en repositorios
 
-- Para buscar en un repositorio
+- Para buscar en un chart
 
 ```sh
 helm search repo [KEYWORD] [flags]
@@ -43,13 +43,25 @@ helm search repo [KEYWORD] [flags]
 Ejemplo:
 
 ```sh
-helm search repo mysql
-helm search repo database
+helm search repo nginx
 ```
-- Para ver las versiones en un repositorio
+
+- Para ver las versiones de los charts
 
 ```sh
-helm search repo database --versions
+helm search repo nginx --versions
+```
+
+- Para buscar una version especifica
+
+```sh
+helm search repo nginx --version 15.0.0
+```
+
+- Buscar por rango de versiones.
+
+```sh
+helm search repo nginx --version "^15.0.0"
 ```
 
 - Para buscar en charts públicos en internet, specíficamente en Artifact Hub usamos
