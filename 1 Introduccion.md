@@ -89,3 +89,18 @@ mi-chart/
 **values.yaml →** configuración por defecto
 
 **templates/ →** plantillas de Kubernetes
+
+## Helm repository
+
+Es un repositorio donde se almacenan y distribuyen Charts de Helm para instalar aplicaciones en Kubernetes.
+
+### Repositorios Helm populares
+
+
+- Bitnami Helm Charts
+
+  https://bitnami.com/stacks?stack=helm
+
+- Artifact Hub (catálogo de charts)
+
+  https://artifacthub.io/packages/search
