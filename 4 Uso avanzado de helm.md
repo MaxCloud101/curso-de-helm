@@ -9,6 +9,6 @@ helm install web bitnami/nginx --dry-run
 ## Generar un yaml desplegable para Kubernetes
 
 ```sh
-helm template web bitnami/nginx --dry-run
+helm template web bitnami/nginx
 ```
 
