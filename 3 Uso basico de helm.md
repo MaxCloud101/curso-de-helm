@@ -151,6 +151,20 @@ helm install web bitnami/nginx --timeout 5m
 helm uninstall
 ```
 
+## Actualizar un chart
+
+- Para actualizar un chart
+
+```sh
+helm upgrade <release-name> <chart>
+```
+
+- Para actualizar los valores de un chart
+
+```sh
+helm upgrade [release-name] [chart] -f values.yaml
+```
+
 ## Ejemplo
 
 ```sh
