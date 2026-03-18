@@ -12,3 +12,20 @@ helm install web bitnami/nginx --dry-run
 helm template web bitnami/nginx
 ```
 
+
+## Deployment releases versions details
+
+
+## Get details of deployment
+
+```sh
+helm get notes web 
+```
+
+```sh
+helm get values web 
+```
+
+```sh
+helm get values web --revision 1 
+```
