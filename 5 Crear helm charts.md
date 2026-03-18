@@ -21,3 +21,14 @@ helm install my_deployment my_chart/
 
 ## Archivo values.yaml del Chart
 
+## Empaquetar un chart
+
+```yaml
+helm package my_chart/ -d /root/
+```
+
+## Validar un chart
+
+```yaml
+helm lint my_chart/
+```
