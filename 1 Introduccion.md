@@ -34,7 +34,7 @@ NGINX
 
 ### Release
 
-Una Release es una instancia instalada de un Chart en el cluster.
+Un Release es una instancia instalada de un Chart en el cluster.
 
 Ejemplo:
 
