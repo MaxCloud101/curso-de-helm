@@ -2,13 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: my-server
-  name: my-server
+    chart: {{ .Chart.Name | lower }}
+    release: {{ .Release.Name | lower }}
+  name: {{ .Release.Name | lower | quote }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: my-server
+      chart: {{ .Chart.Name | lower }}
+      release: {{ .Release.Name | lower }}
   strategy: {}
   template:
     metadata:
