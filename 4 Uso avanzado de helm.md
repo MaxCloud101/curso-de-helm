@@ -15,6 +15,9 @@ helm template web bitnami/nginx
 
 ## Deployment releases versions details
 
+```sh
+helm install web bitnami/nginx --version 23.0.3
+```
 
 ## Get details of deployment
 
