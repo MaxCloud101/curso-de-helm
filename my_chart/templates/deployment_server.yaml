@@ -22,4 +22,6 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
+      - name: fluentd
+        image: fluent/fluentd
 status: {}
