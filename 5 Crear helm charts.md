@@ -6,6 +6,26 @@
 helm create my_chart
 ```
 
+Directory Tree
+
+```sh
+.
+|-- Chart.yaml
+|-- charts
+|-- templates
+|   |-- NOTES.txt
+|   |-- _helpers.tpl
+|   |-- deployment.yaml
+|   |-- hpa.yaml
+|   |-- httproute.yaml
+|   |-- ingress.yaml
+|   |-- service.yaml
+|   |-- serviceaccount.yaml
+|   `-- tests
+|       `-- test-connection.yaml
+`-- values.yaml
+```
+
 ## Instalar un Chart custom
 
 ```yaml
