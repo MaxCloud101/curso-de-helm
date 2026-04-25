@@ -71,19 +71,24 @@ annotations:
 
 Example files: templates/
 
-deployment.yaml  hpa.yaml  httproute.yaml  ingress.yaml  service.yaml  serviceaccount.yaml
+- deployment.yaml  
+- hpa.yaml  
+- httproute.yaml  
+- ingress.yaml  
+- service.yaml  
+s- erviceaccount.yaml
 
 ## Archivo Helper en un template Helm
 
 Example files: templates/
 
-_helpers.tpl
+- _helpers.tpl
 
 ## Archivo values.yaml del Chart
 
 Example files: /
 
-values.yaml
+- values.yaml
 
 ## Empaquetar un chart
 
