@@ -76,7 +76,7 @@ Example files: templates/
 - httproute.yaml  
 - ingress.yaml  
 - service.yaml  
-s- erviceaccount.yaml
+- serviceaccount.yaml
 
 ## Archivo Helper en un template Helm
 
