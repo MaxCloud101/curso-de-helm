@@ -90,6 +90,12 @@ Example files: /
 
 - values.yaml
 
+## Helm Notas
+
+Example files: templates/
+
+- NOTES.txt
+
 ## Empaquetar un chart
 
 ```yaml
