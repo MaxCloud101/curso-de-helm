@@ -3,7 +3,7 @@
 ## Template validation
 
 ```sh
-helm lint
+helm lint my_chart
 ```
 
 
