@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - image: nginx
-        name: nginx
+        name: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         resources: {}
         ports:
           {{- range .Values.ports }}
