@@ -1,2 +1,2 @@
 Total of replicas: {{ .Values.replicaCount }}
-Login habilitado: {{ .Values.EnableLogging }}
+Login habilitado: {{ .Values.enableLogging }}
