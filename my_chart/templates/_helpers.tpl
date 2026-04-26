@@ -3,5 +3,5 @@
 {{- end }}
 
 {{- define "my_chart.containername" -}}
-{{ printf "%s-%s" ..Chart.Name  .Values.environment | lower }}
+{{ printf "%s-%s" .Chart.Name  .Values.environment | lower }}
 {{- end }}
