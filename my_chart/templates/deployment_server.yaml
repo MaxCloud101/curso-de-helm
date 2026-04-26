@@ -4,6 +4,13 @@ metadata:
   labels:
     chart: {{ .Chart.Name | lower }}
     release: {{ .Release.Name | lower }}
+    {{- if eq .Values.environment "prod" }}
+    environment: "production"
+    {{- else if eq .Values.environment "dev" }}
+    environment: "development"
+    {{- else }}
+    environment: "qa"
+    {{- end }}
   name: {{ .Release.Name | lower | quote }}
 spec:
   replicas: {{ .Values.replicaCount | int }}
@@ -22,7 +29,7 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
-        {{- if (.Values.EnableLogging ) }}
+        {{- if (.Values.enableLogging ) }}
       - name: fluentd
         image: fluent/fluentd
         {{- end }}
