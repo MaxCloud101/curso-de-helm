@@ -6,7 +6,7 @@ metadata:
     release: {{ .Release.Name | lower }}
   name: {{ .Release.Name | lower | quote }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.replicaCount | int }}
   selector:
     matchLabels:
       chart: {{ .Chart.Name | lower }}
@@ -22,7 +22,7 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
-      {{- if .Values.EnableLogging }}
+      {{- if (.Values.EnableLogging | toBool) }}
       - name: fluentd
         image: fluent/fluentd
       {{- end }}
