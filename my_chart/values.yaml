@@ -2,8 +2,8 @@ nameOverride: ""
 replicaCount: 1
 enableLogging: True
 image:
-  repository: nginx
-  tag: 1.27
+  repository: "nginx"
+  tag: "1.27"
 ports:
   - name: http
     port: 80
