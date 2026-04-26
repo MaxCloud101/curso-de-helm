@@ -1,3 +1,4 @@
+{{- $finalTag := "" }}
 {{- if eq .Values.image.tag "" }}
   {{- $finalTag := "latest" }}
 {{- else }}
