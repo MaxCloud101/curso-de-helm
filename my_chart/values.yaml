@@ -12,3 +12,5 @@ ports:
   - name: metrics
     port: 9090
 environment: dev
+mysql:
+  enabled: false
