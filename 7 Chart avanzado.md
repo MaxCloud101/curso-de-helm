@@ -2,7 +2,7 @@
 
 - Actualizacion de dependencias
 ```sh
-helm dependency update update my_chart
+helm dependency update my_chart/
 ```
 
 - Las dependencias se mostraran aqui
