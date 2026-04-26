@@ -1,8 +1,13 @@
 replicaCount: 1
-
 enableLogging: True
 image:
   repository: nginx
   tag: "1.27"
-
+ports:
+  - name: http
+    port: 80
+  - name: https
+    port: 443
+  - name: metrics
+    port: 9090
 environment: dev
