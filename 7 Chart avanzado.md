@@ -2,6 +2,8 @@
 
 - Actualizacion de dependencias
 ```sh
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
 helm dependency update my_chart/
 ```
 
