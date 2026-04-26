@@ -22,7 +22,7 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
-        {{- if (.Values.EnableLogging | toBool) }}
+        {{- if (.Values.EnableLogging ) }}
       - name: fluentd
         image: fluent/fluentd
         {{- end }}
