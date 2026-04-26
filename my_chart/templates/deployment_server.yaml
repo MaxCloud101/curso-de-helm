@@ -29,6 +29,11 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
+        ports:
+          {{- range .Values.ports }}
+          - name: {{ .name }}
+            containerPort: {{ .port | int }}
+          {{- end }}
         {{- if (.Values.enableLogging ) }}
       - name: fluentd
         image: fluent/fluentd
