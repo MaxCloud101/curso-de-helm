@@ -1,3 +1,9 @@
+{{- if eq .Values.image.tag "" }}
+  {{- $finalTag := "latest" }}
+{{- else }}
+  {{- $finalTag := .Values.image.tag }}
+{{- end }}
+      
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +25,7 @@ spec:
         release: {{ .Release.Name | lower }}
     spec:
       containers:
-      - image: nginx
+      - image: nginx:{{ $finalTag }}
         name: nginx
         resources: {}
       {{- if (.Values.EnableLogging | toBool) }}
