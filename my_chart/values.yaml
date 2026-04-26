@@ -12,5 +12,16 @@ ports:
   - name: metrics
     port: 9090
 environment: dev
+
 mysql:
-  enabled: false
+  enabled: true
+  auth:
+    database: "my_custom_db"
+    username: "customowner"
+    password: "test12345"
+  primary:
+    service:
+      type: NodePort
+
+rabbitmq:
+  enabled: true
