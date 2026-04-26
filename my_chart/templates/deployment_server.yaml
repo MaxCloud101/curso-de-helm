@@ -1,3 +1,4 @@
+{{- $image := printf "%s:%s" .Values.image.repository .Values.image.tag }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,7 +28,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: {{ $image }}
         resources: {}
         ports:
           {{- range .Values.ports }}
