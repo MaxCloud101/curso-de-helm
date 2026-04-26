@@ -11,7 +11,7 @@ metadata:
     {{- else }}
     environment: "qa"
     {{- end }}
-  name: {{ .Release.Name | lower | quote }}
+  name: {{ include "my_chart.name" . }}
 spec:
   replicas: {{ .Values.replicaCount | int }}
   selector:
