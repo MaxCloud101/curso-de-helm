@@ -2,7 +2,7 @@
 
 - Actualizacion de dependencias
 ```sh
-helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add kubelauncher https://kubelauncher.github.io/charts
 helm repo update
 helm dependency update my_chart/
 ```
