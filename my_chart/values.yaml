@@ -23,5 +23,5 @@ mysql:
     service:
       type: NodePort
 
-rabbitmq:
+redis:
   enabled: true
