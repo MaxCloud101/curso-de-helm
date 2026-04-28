@@ -12,7 +12,7 @@ dependencies:
     repository: "https://kubelauncher.github.io/charts"
     condition: mysql.enabled
     import-values:
-      child: image
+    - child: image
       parent: mysql_image
 
   - name: redis 
