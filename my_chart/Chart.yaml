@@ -8,11 +8,11 @@ appVersion: "1.1.0"
 
 dependencies:
   - name: mysql
-    version: "1.6.9"
-    repository: "https://helm.wso2.com"
+    version: "0.3.5"
+    repository: "https://kubelauncher.github.io/charts"
     condition: mysql.enabled
 
-  - name: rabbitmq
-    version: "2.3.0"
-    repository: "https://groundhog2k.github.io/helm-charts/"
+  - name: redis 
+    version: "0.3.5"
+    repository: "https://kubelauncher.github.io/charts"
     condition: rabbitmq.enabled
