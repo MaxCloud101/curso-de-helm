@@ -7,12 +7,12 @@ version: 0.1.0
 appVersion: "1.1.0"
 
 dependencies:
-  - name: wso2/mysql
+  - name: mysql
     version: "1.6.9"
     repository: "https://helm.wso2.com"
     condition: mysql.enabled
 
-  - name: groundhog2k/rabbitmq
+  - name: rabbitmq
     version: "2.3.0"
     repository: "https://groundhog2k.github.io/helm-charts/"
     condition: rabbitmq.enabled
