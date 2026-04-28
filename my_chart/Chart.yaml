@@ -15,4 +15,4 @@ dependencies:
   - name: redis 
     version: "0.3.5"
     repository: "https://kubelauncher.github.io/charts"
-    condition: rabbitmq.enabled
+    condition: redis.enabled
