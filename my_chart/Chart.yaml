@@ -8,11 +8,11 @@ appVersion: "1.1.0"
 
 dependencies:
   - name: mysql
-    version: "14.0.3"
-    repository: "https://charts.bitnami.com/bitnami"
+    version: "wso2/mysql"
+    repository: "https://helm.wso2.com"
     condition: mysql.enabled
 
-  - name: rabbitmq
-    version: "16.0.14"
-    repository: "https://charts.bitnami.com/bitnami"
+  - name: groundhog2k/rabbitmq
+    version: "2.3.0"
+    repository: "https://groundhog2k.github.io/helm-charts/"
     condition: rabbitmq.enabled
