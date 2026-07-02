@@ -43,9 +43,3 @@ helm uninstall web --keep-history
 helm rollback web 3  
 ```
 
-
-## Atomic
-
-```sh
-helm install web bitnami/nginx --atomic
-```
