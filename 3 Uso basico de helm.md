@@ -287,13 +287,13 @@ kubectl get secrets
 ## Get details of deployment
 
 ```sh
-helm get notes web 
+helm get notes my-postgresql 
 ```
 
 ```sh
-helm get values web 
+helm get values my-postgresql 
 ```
 
 ```sh
-helm get values web --revision 1 
+helm get values my-postgresql  --revision 1 
 ```
