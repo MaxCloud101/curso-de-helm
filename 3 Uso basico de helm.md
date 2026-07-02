@@ -258,6 +258,25 @@ lanzamos el comando dentro del pod postgres-client
 psql -h my-postgresql -U user -d mydb -p 5439
 ```
 
+## Helm release records
+
+En Helm, los release records son los registros que Helm almacena para mantener el historial de cada despliegue (release). 
+
+Gracias a ellos, Helm sabe qué versión está instalada, permite hacer rollback, comparar cambios y administrar actualizaciones.
+
+
+### ¿Qué contiene un release record?
+
+Cada release record almacena información como:
+
+- Nombre del release (ej. nginx)
+- Namespace donde fue instalado
+- Número de revisión (Revision)
+- Estado (deployed, failed, superseded, uninstalled, etc.)
+- Chart utilizado
+- Valores (values.yaml) usados durante la instalación
+- Manifiestos de Kubernetes generados
+- Fecha y hora de la instalación o actualización
 
 
 ## Multiple namespaces
@@ -278,4 +297,4 @@ helm install web bitnami/nginx --create-namespace -n dev
 helm ls -A
 ```
 
-## Helm release records
+
