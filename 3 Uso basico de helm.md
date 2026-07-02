@@ -163,37 +163,23 @@ helm template web bitnami/nginx
 helm uninstall
 ```
 
-## Actualizar un chart
+## Multiple namespaces
 
-- Para actualizar un chart
-
-```sh
-helm upgrade <release-name> <chart>
-```
-
-- Para actualizar los valores de un chart
+- Desplegar el chart en diferentes namespaces
 
 ```sh
-helm upgrade [release-name] [chart] -f values.yaml
+helm install web bitnami/nginx --create-namespace -n prod 
 ```
-
-## Ejemplo
 
 ```sh
-helm install web bitnami/nginx \
-  --namespace web \
-  --create-namespace \
-  --set replicaCount=3 \
-  --version 17.3.9 \
-  --wait
+helm install web bitnami/nginx --create-namespace -n dev
 ```
 
-Esto hace:
+- Ver todas las instalaciones
 
-- Instala nginx
-- Crea namespace web
-- Usa 3 replicas
-- Espera a que los pods estén listos
+```sh
+helm ls -A
+```
 
 ## Chart status
 
@@ -240,6 +226,8 @@ psql -h my-postgresql -U user -d mydb
 ```
 
 ## Helm Upgrade
+
+Vamos a actualizar el service para cambiar el puerto por el que me conecto a la base de datos
 
 values.yaml 
 
