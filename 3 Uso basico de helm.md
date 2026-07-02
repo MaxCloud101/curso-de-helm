@@ -149,6 +149,11 @@ helm install web bitnami/nginx --timeout 5m
 helm install web bitnami/nginx --atomic
 ```
 
+## Generar un yaml desplegable para Kubernetes
+
+```sh
+helm template web bitnami/nginx
+```
 
 ## Eliminar chart
 
