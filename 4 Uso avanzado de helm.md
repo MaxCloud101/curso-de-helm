@@ -6,19 +6,6 @@
 helm template web bitnami/nginx
 ```
 
-## Get details of deployment
-
-```sh
-helm get notes web 
-```
-
-```sh
-helm get values web 
-```
-
-```sh
-helm get values web --revision 1 
-```
 
 ## Rollback
 
