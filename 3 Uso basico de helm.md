@@ -195,16 +195,16 @@ helm status web
 
 Usaremos el siguiente chart:
 
-https://artifacthub.io/packages/helm/bitnami/mariadb?modal=values-schema
+https://artifacthub.io/packages/helm/bitnami/postgresql
 
 values.yaml 
 
 ```yaml
 auth:
-  database: "helm_training"
-  password: "Test1234"
-  username: "custom_user"
-  rootPassword: "RootPass1234"
+  postgresPassword: admin123
+  username: user
+  password: user123
+  database: mydb
 ```
 
 ```sh
@@ -212,7 +212,19 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
 ```sh
-helm install my-mariadb bitnami/mariadb --version 25.0.1 -f values.yaml
+helm install my-postgresql bitnami/postgresql --version 18.7.10 -f values.yaml
+```
+
+Probamos:
+
+```sh
+kubectl run postgres-client --image=postgres:16 --restart=Never -it --rm -- bash
+```
+
+lanzamos el comando dentro del postgres
+
+```sh
+psql -h my-postgresql -U user -d mydb
 ```
 
 ## Multiple namespaces
