@@ -143,6 +143,13 @@ helm install web bitnami/nginx --wait
 helm install web bitnami/nginx --timeout 5m
 ```
 
+- Instalacion de manera atomica (Todo o nada)
+
+```sh
+helm install web bitnami/nginx --atomic
+```
+
+
 ## Eliminar chart
 
 - Para eliminar un chart
