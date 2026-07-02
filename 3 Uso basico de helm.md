@@ -258,6 +258,14 @@ lanzamos el comando dentro del pod postgres-client
 psql -h my-postgresql -U user -d mydb -p 5439
 ```
 
+## Helm history
+
+Lanzamos el siguiente comando para ver el historial del release
+
+```sh
+helm history my-postgresql 
+```
+
 ## Helm release records
 
 En Helm, los release records son los registros que Helm almacena para mantener el historial de cada despliegue (release). 
@@ -296,4 +304,19 @@ helm get values my-postgresql
 
 ```sh
 helm get values my-postgresql  --revision 1 
+```
+
+## Rollback
+
+
+```sh
+helm rollback my-postgresql 1  
+```
+
+```sh
+helm uninstall my-postgresql --keep-history  
+```
+
+```sh
+helm rollback my-postgresql 3  
 ```
