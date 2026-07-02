@@ -284,22 +284,16 @@ Para ver los release records debes ver los secretos en el namespace donde creast
 kubectl get secrets
 ```
 
-## Multiple namespaces
-
-- Desplegar el chart en diferentes namespaces
+## Get details of deployment
 
 ```sh
-helm install web bitnami/nginx --create-namespace -n prod 
+helm get notes web 
 ```
 
 ```sh
-helm install web bitnami/nginx --create-namespace -n dev
+helm get values web 
 ```
-
-- Ver todas las instalaciones
 
 ```sh
-helm ls -A
+helm get values web --revision 1 
 ```
-
-
