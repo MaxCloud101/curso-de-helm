@@ -278,6 +278,11 @@ Cada release record almacena información como:
 - Manifiestos de Kubernetes generados
 - Fecha y hora de la instalación o actualización
 
+Para ver los release records debes ver los secretos en el namespace donde creaste el release
+
+```sh
+kubectl get secrets
+```
 
 ## Multiple namespaces
 
