@@ -221,11 +221,44 @@ Probamos:
 kubectl run postgres-client --image=postgres:16 --restart=Never -it --rm -- bash
 ```
 
-lanzamos el comando dentro del postgres
+lanzamos el comando dentro del pod postgres-client
 
 ```sh
 psql -h my-postgresql -U user -d mydb
 ```
+
+## Helm Upgrade
+
+values.yaml 
+
+```yaml
+auth:
+  postgresPassword: admin123
+  username: user
+  password: user123
+  database: mydb
+primary:
+  service:
+    ports:
+      postgresql: 5439
+```
+
+```
+helm upgrade my-postgresql bitnami/postgresql --version 18.7.10 -f values.yaml
+```
+Probamos:
+
+```sh
+kubectl run postgres-client --image=postgres:16 --restart=Never -it --rm -- bash
+```
+
+lanzamos el comando dentro del pod postgres-client
+
+```sh
+psql -h my-postgresql -U user -d mydb -p 5439
+```
+
+
 
 ## Multiple namespaces
 
