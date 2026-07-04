@@ -10,27 +10,18 @@
       "maximum": 20
     },
 
-    "image": {
-      "type": "object",
+    "environment": {
+      "type": "string",
       "additionalProperties": false,
-      "properties": {
-        "repository": {
-          "type": "string",
-          "minLength": 1
-        },
-        "tag": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "repository",
-      ]
+      "minimum": 1,
+      "maximum": 20
+      
     },
 
   },
 
   "required": [
     "replicaCount",
-    "image"
+    "environment"
   ]
 }
