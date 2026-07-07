@@ -64,6 +64,12 @@ helm search repo nginx --version 15.0.0
 helm search repo nginx --version "^15.0.0"
 ```
 
+- Mostrar todas las que sadisface la condicion.
+
+```sh
+helm search repo nginx --version "^15.0.0" --versions
+```
+
 - Para buscar en charts públicos en internet, specíficamente en Artifact Hub usamos
 
 ```sh
