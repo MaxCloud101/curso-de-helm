@@ -55,7 +55,7 @@ helm search repo nginx --versions
 - Para buscar una version especifica
 
 ```sh
-helm search repo nginx --version 25.0.13
+helm search repo nginx --version v^15.0.0
 ```
 
 - Buscar por rango de versiones.
@@ -111,7 +111,7 @@ helm install web bitnami/nginx --set replicaCount=3
 - Para instalar una version específica
 
 ```sh
-helm install web bitnami/nginx --version 17.3.9
+helm install web bitnami/nginx --version 25.0.13
 ```
 
 - Para instalar un chart en un namespace
