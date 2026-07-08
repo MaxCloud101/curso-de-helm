@@ -55,7 +55,7 @@ helm search repo nginx --versions
 - Para buscar una version especifica
 
 ```sh
-helm search repo nginx --version 15.0.0
+helm search repo nginx --version 25.0.13
 ```
 
 - Buscar por rango de versiones.
