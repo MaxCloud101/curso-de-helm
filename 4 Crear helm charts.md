@@ -29,7 +29,7 @@ Directory Tree
 ## Instalar un Chart custom
 
 ```yaml
-helm install helm_deployment mychart/
+helm install deployment mychart/
 ```
 
 ## Parametros para Chart.yaml
