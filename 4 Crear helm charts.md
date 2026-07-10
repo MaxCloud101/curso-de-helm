@@ -3,7 +3,7 @@
 ## Crear un Chart custom
 
 ```yaml
-helm create my_chart
+helm create mychart
 ```
 
 Directory Tree
@@ -29,7 +29,7 @@ Directory Tree
 ## Instalar un Chart custom
 
 ```yaml
-helm install my_deployment my_chart/
+helm install helm_deployment mychart/
 ```
 
 ## Parametros para Chart.yaml
